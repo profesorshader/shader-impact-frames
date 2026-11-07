@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cmhyevomvp7h5"]
 
 [ext_resource type="Script" uid="uid://dse75jipmy3b4" path="res://scripts/impact_frames.gd" id="1_drcpm"]
-[ext_resource type="Texture2D" uid="uid://b2cp4fddlqrn5" path="res://textures/younggirl01.png" id="2_drcpm"]
+[ext_resource type="Texture2D" uid="uid://b2cp4fddlqrn5" path="res://textures/young_girl01.png" id="2_drcpm"]
 [ext_resource type="Material" uid="uid://dvrhj58ra2igo" path="res://materials/example03.tres" id="2_itjev"]
-[ext_resource type="Texture2D" uid="uid://b0qwhdc51pi" path="res://textures/younggirl01b.png" id="3_vh2lx"]
+[ext_resource type="Texture2D" uid="uid://b0qwhdc51pi" path="res://textures/young_girl01b.png" id="3_vh2lx"]
 
 [node name="Root" type="Node2D" unique_id=1837234002]
 script = ExtResource("1_drcpm")
