@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cmhyevomvp7h5"]
+
+[ext_resource type="Script" uid="uid://dse75jipmy3b4" path="res://scripts/impact_frames.gd" id="1_drcpm"]
+[ext_resource type="Texture2D" uid="uid://b2cp4fddlqrn5" path="res://textures/younggirl01.png" id="2_drcpm"]
+[ext_resource type="Material" uid="uid://dvrhj58ra2igo" path="res://materials/example03.tres" id="2_itjev"]
+[ext_resource type="Texture2D" uid="uid://b0qwhdc51pi" path="res://textures/younggirl01b.png" id="3_vh2lx"]
+
+[node name="Root" type="Node2D" unique_id=1837234002]
+script = ExtResource("1_drcpm")
+
+[node name="Images" type="CanvasLayer" parent="." unique_id=1805885333]
+
+[node name="TextureRect1" type="TextureRect" parent="Images" unique_id=2026841026]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_drcpm")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Images" unique_id=947158087]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vh2lx")
+expand_mode = 2
+
+[node name="Postpo" type="CanvasLayer" parent="." unique_id=1979211196]
+
+[node name="ColorRect" type="ColorRect" parent="Postpo" unique_id=1105248802]
+visible = false
+material = ExtResource("2_itjev")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
