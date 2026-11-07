@@ -17,8 +17,8 @@ uniform float dist_strength = 1.0;
 uniform vec2  radial_center = vec2(0.5);
 uniform float radial_zoom = 0.01;
 uniform float radial_repeat = 10.0;
-uniform float radial_min : hint_range(0.0, 1.0) = 0.05; // radial vignette
-uniform float radial_max : hint_range(0.0, 1.0) = 0.75;  // radial vignette
+uniform float radial_min : hint_range(0.0, 1.0) = 0.5; // multiplier for line length at the center
+uniform float radial_max : hint_range(0.0, 1.0) = 1.0; // multiplier for line length at the edges
 #else
 uniform float speed_u = 0.1;
 uniform float rot_angle = 0.0;
@@ -81,12 +81,19 @@ void fragment() {
 
 		// convert noise val from 0..1 to -1..1
 		noi_val = (noi_val * 2.0) - 1.0;		
-		
+
 		// apply power
 		noi_val = sign(noi_val) * pow(abs(noi_val), power);		
 		
 		// compute distortion vector
+#if USE_RADIAL_MODE		
+		// apply radial distance adjustment
+		float vig_mask = mix(radial_min, radial_max, length(dir));
+		float dist_val = noi_val * dist_strength * vig_mask;
+#else
 		float dist_val = noi_val * dist_strength;
+#endif		
+
 		vec2 dist_vec = dir * dist_val;
 		vec2 distorted_uvs = SCREEN_UV + dist_vec;
 

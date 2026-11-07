@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://d0wtxupg52luv" path="res://shaders/impact_frames_radial.gdshader" id="1_1mfd1"]
 
 [sub_resource type="Gradient" id="Gradient_dml2m"]
-offsets = PackedFloat32Array(0, 0.23728813, 0.38418078, 0.5445026, 0.6101695, 1)
+offsets = PackedFloat32Array(0, 0.23728813, 0.2914046, 0.5387841, 0.6101695, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_4esin"]
@@ -28,6 +28,6 @@ shader_parameter/speed_v = 0.1
 shader_parameter/dist_strength = 1.0
 shader_parameter/radial_center = Vector2(0.5, 0.5)
 shader_parameter/radial_zoom = 0.01
-shader_parameter/radial_repeat = 10.0
-shader_parameter/radial_min = 0.05
-shader_parameter/radial_max = 0.75
+shader_parameter/radial_repeat = 20.0
+shader_parameter/radial_min = 0.5
+shader_parameter/radial_max = 1.0
