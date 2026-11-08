@@ -1,6 +1,6 @@
 # Shader Impact Frames (Anime Style)
 
-Anime style speed impact frames shader for Godot.
+Anime style impact frames shader for Godot.
 
 Highly configurable; linear and radial.
 
